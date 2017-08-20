@@ -1,0 +1,285 @@
+/*
+=====================================================================================
+=                       IOTABalance v1.0.0-beta Release                             =
+=                             Local Web Edition                                     =
+=                           Date: August 20th 2017                                  =
+=                          Mockup Designer: Navin.R                                 =
+=                             Author: Michael.S                                     =
+=                                  |iotaos|                                         =
+=====================================================================================
+*/
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   background-color: white;
+}
+#headbox {
+	color:white;
+	text-align: center;
+	background: #182848; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #182848 50%, #4563A9 90%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #182848 50%, #4563A9 90%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #182848 50%, #4563A9 90%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #182848 50%, #4563A9 90%); /* Standard syntax */
+	margin: 0;
+	padding:15px;
+	font-weight: normal;
+}
+.footer_button {
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	color:black;
+	padding:4px;
+}
+.footer_button:hover {
+	background: #6e89c9;
+	color:white;
+	border-radius:8px;
+	padding:4px;
+}
+.session_buttons {
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	color:black;
+	padding:4px;
+}
+
+#restoration_done {
+	border-radius:10px;
+	background: #6e89c9;
+	color:white;
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	padding:4px;	
+}
+#overwritten_done {
+	border-radius:10px;
+	background: #6e89c9;
+	color:white;
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	padding:4px;
+	
+}
+#saveSession_done {
+	border-radius:10px;
+	background: #6e89c9;
+	color:white;
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	padding:4px;
+	
+}
+#qSession {
+	padding-left:8px;
+	padding-right:8px;
+}
+.session_buttons:hover {
+	background: #6e89c9;
+	color:white;
+	border-radius:8px;
+	padding:4px;
+}
+.export_button {
+	font-family: 'Lato', sans-serif;
+	font-size:15px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	color:black;
+	padding:4px;
+}
+.export_button:hover {
+	background: #6e89c9;
+	color:white;
+	border-radius:8px;
+	padding:4px;
+}
+#opening_message {
+	margin-top:6px;
+	font-family: 'Lato', sans-serif;
+	padding-top:4px;
+	display: inline-block;
+	width:100%;
+	letter-spacing:1px;
+	font-size:16px;
+	color:black;
+	text-align: center;
+}
+#browser_notice {
+	font-family: 'Lato', sans-serif;
+	padding-top:4px;
+	display: inline-block;
+	width:100%;
+	letter-spacing:1px;
+	font-size:14px;
+	color:black;
+	text-align: center;	
+}
+#session_message_new {
+	padding-top:24px;
+	display: inline-block;
+	width:100%;
+	letter-spacing:1px;
+	font-size:16px;
+	color:black;
+	text-align: center;
+	padding-bottom:4px;
+}
+
+#the_balanceM {
+	margin-top:6px;
+	font-family: 'Lato', sans-serif;
+	display: inline-block;
+	width:100%;
+	height:20px;
+	letter-spacing:1px;
+	font-size:17px;
+	color: black;
+	text-align: center;
+}
+#the_balanceI {
+	margin-top:6px;
+	font-family: 'Lato', sans-serif;
+	display: inline-block;
+	width:100%;
+	letter-spacing:1px;
+	font-size:12px;
+	color: black;
+	text-align: center;
+}
+.title_style {
+	padding-top:8px;
+	padding-bottom:4px;
+	font-family: 'Lato', sans-serif;
+	color:white;
+	font-size:16px;
+	font-weight:400;
+}
+#topbuttons {
+	font-family: 'Lato', sans-serif;
+	padding-top:8px;
+	margin: 0;
+	text-align: center;
+	font-size:14px;
+}
+#the_menu {
+	background: white;
+	height:75px;
+	width:100%;	
+	text-align: center;
+}
+#count_result_div {
+	font-family: 'Lato', sans-serif;
+	padding-top:10px;
+	display: inline-block;
+	width:100%;
+	letter-spacing:1px;
+	font-size:13px;
+	color:black;
+	text-align: center;
+}
+
+#totalschecker {
+	font-family: 'Lato', sans-serif;
+	border-radius:9px;
+	color:black;
+	margin-top:1px;
+	font-size:11px;
+	height:18px;
+	display:inline-block;
+	border: 1px solid #6e89c9;
+}
+#totalschecker:hover {
+	color: black;
+	background: white;
+}
+#count_result_d {
+
+}
+#count_result_d:hover {
+
+}
+
+.edition_text {
+	font-family: 'Lato', sans-serif;
+	font-size:12px;
+}
+.lis {
+	color:black;
+}
+.toplinks {
+	color:black;
+}
+.pricing_span {
+	 font-size:12px;
+	 color:black;
+	 padding-bottom:8px;
+}
+.menu_buttons {
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	padding-right:5px; 
+	padding-left:5px; 
+	border-radius:8px;
+	color:white;
+	padding:4px;
+}
+.menu_buttons:hover {
+	background: #4563A9;
+	border-radius:8px;
+	color:white;
+	padding:4px;
+}
+#overwrite_dialog {
+}
+#contenthelp {
+  float: right;
+  width: 100%;
+  height:344px;
+
+}
+#contenthelpfaq {
+  float: right;
+  width: 100%;
+  height:214px;
+
+}
+#contentselectdialog {
+  float: right;
+  width: 100%;
+  height:390px;	
+}
+#getvideodialog:hover {
+
+}
+
+#support_me {
+	color:black;
+}
+
+select {
+  border: 1px solid #111;
+  background: transparent;
+  width:90%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  height: 30px;
+
+}

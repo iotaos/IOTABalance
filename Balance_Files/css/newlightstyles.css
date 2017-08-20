@@ -1,0 +1,365 @@
+/*
+=====================================================================================
+=                       IOTABalance v1.0.0-beta Release                             =
+=                             Local Web Edition                                     =
+=                           Date: August 20th 2017                                  =
+=                          Mockup Designer: Navin.R                                 =
+=                             Author: Michael.S                                     =
+=                                  |iotaos|                                         =
+=====================================================================================
+*/
+input{
+   text-align:center;
+}
+
+h1 {
+	color:white;
+	text-align: center;
+	background-color: black;
+	margin: 0;
+	padding:15px;
+	font-weight: normal;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+}
+#body {
+   padding-bottom:60px;   /* Height of the footer */
+   font-family: 'Lato', sans-serif;
+}
+button {
+	font-family: 'Lato', sans-serif;
+	font-size:14px;
+	border: none;
+	border-radius:10px;
+	background: none;
+	height: 100%;
+	letter-spacing:1px;
+	transition: all 0.5s;
+	outline: 0;
+}
+button:hover {
+	background: #4563A9;
+}
+#history_out {
+	height:100%;
+	padding-bottom:150px;`
+}
+
+#footer {
+   padding-top:25px;
+   text-align: center;
+   position:relative;
+   bottom:0;
+   width:100%;
+   height:20px;   /* Height of the footer */
+}
+
+
+
+
+#the_details_link {
+	display: inline-block;
+	width:100%;
+	height:20px;
+	letter-spacing:1px;
+	font-size:14px;
+	color: purple;
+	text-align: center;
+}
+#at_milestone {
+	display: inline-block;
+	width:100%;
+	height:25px;
+	letter-spacing:1px;
+	font-size:12px;
+	color: grey;
+	text-align: center;
+	font-style: italic;
+}
+#inputdiv {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#input_field {
+	display: inline-block;
+	width:40%;
+	height:100%;
+	text-transform: uppercase;
+	font-size:13px;
+	letter-spacing:1px;
+	font-weight: 500;
+	color: black;
+	padding:8px;
+}
+#guide_title {
+	margin-top:20px;
+	display: inline-block;
+	width:40%;
+	height:50%;
+	letter-spacing:1px;
+	font-weight: 700;
+	font-size:22px;
+	color: black;
+}
+.square {
+	width: 30%;
+	background:purple;
+	padding-bottom:30%;
+	float:left;
+	margin:1.66%;
+	border-radius:100%;
+}
+.data_out {
+	text-align: center;
+	padding-bottom:10px;
+}
+
+#functionbuttons {
+	margin-top:5px;
+	margin-bottom:20px;
+}
+
+#iotalogo {
+	width:50px;
+	height:50px;
+}
+
+.menu_links {
+	color:black;
+	font-size:14px;
+}
+.menu_links_old {
+	font-family: 'Lato', sans-serif;
+	color:white;
+	font-size:14px;
+}
+li {
+	text-decoration:none; 
+	list-style: none;
+}
+
+
+#guide {
+	padding-left:33.3%;
+	text-align: left;
+	color:white;
+	padding-bottom:50px;
+}
+.step {
+	padding-bottom:10px;
+	padding-top:10px;
+}
+.detail {
+	padding:0;
+}
+
+.shifty {
+	position:relative;
+	text-align:left;
+	left:-33.3%;
+}
+#checkers {
+	font-family: 'Lato', sans-serif;
+	border-radius:9px;
+	color:black;
+	margin-top:1px;
+	font-size:11px;
+	height:18px;
+	display:inline-block;
+	border: 1px solid #6e89c9;
+}
+#checkers:hover {
+	color: black;
+	background: white;
+}
+#charcounting {
+
+}
+#charcounting:hover {
+
+}
+
+.guide_lis {
+	font-size:13px;
+	font-style: italic;
+	color:grey;
+}
+
+.orange {
+	color:orange;
+}
+
+.purple {
+	color:purple;
+}
+a {
+	color: #6e89c9;
+}
+
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+.ui-dialog .ui-dialog-titlebar {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom:10px;
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+}
+
+.ui-widget-content {
+	background:white;
+	opacity:0.92;
+}
+
+.ui-button {
+	color:black;
+	border:1px solid black;
+	margin-top:3px;
+}
+p {
+	font-family: 'Lato', sans-serif;
+}
+.ui-widget-header{
+	color:black;
+	font-weight:bold;
+}
+.ui-button-icon-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.ui-button.ui-icon-notext .ui-icon {
+	padding: 0;
+	width: 2.1em;
+	height: 2.1em;
+	text-indent: -9999px;
+	white-space: nowrap;
+
+}
+.ui-icon {
+	display: inline-block;
+	vertical-align: middle;
+	
+	position: relative;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.ui-dialog {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+	border:1px solid white;
+	width:600px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 20px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 1px solid #c5c5c5;
+	background: #f6f6f6;
+	font-weight: normal;
+	color: #454545;
+}
+
+.ui-button-icon-only {
+	width: 2em;
+	box-sizing: border-box;
+	text-indent: -9999px;
+	white-space: nowrap;
+}
+
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 0;
+	white-space: nowrap;
+	width: 90%;
+	height:30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left:11px;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 30px;
+	width: 15px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 15px;
+}
+
+.ui-button{
+	float:right;
+}
+
+
+#wrapper {
+  margin-left: 160px;
+
+}
+#content {
+  float: right;
+  width: 100%;
+
+}
+#sidebarfaq {
+  float: left;
+  width: 160px;
+  margin-left: -160px;
+  background-color: #6e89c9;
+  height:412px;
+}
+#sidebar {
+  float: left;
+  width: 160px;
+  margin-left: -160px;
+}
+#cleared {
+}
+
+#help_dialog {
+	background-color: #6e89c9;
+}
+
+
+#lefthelp {
+	margin-left:-160px;
+}
+
+
+.overflowaddy {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#getvideodialog:hover {
+	background: #6e89c9;
+}
+
+#releasesView {
+   font-family: 'Lato', sans-serif;
+   font-size:12px;
+}

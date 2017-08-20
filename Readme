@@ -1,0 +1,18 @@
+=====================================================================================
+=                       IOTABalance v1.0.0-beta Release                             =
+=                             Local Web Edition                                     =
+=                           Date: August 20th 2017                                  =
+=                          Mockup Designer: Navin.R                                 =
+=                             Author: Michael.S                                     =
+=                                  |iotaos|                                         =
+=====================================================================================
+=                 This is the Local Web Edition of IOTABalance.                     =
+=                 Launch by opening the "IOTABalance.html" file.                    =
+=                This is located inside the Folder "IOTABalance".                   =
+=====================================================================================
+=                This is a simplistic tangle address lookup tool.                   =
+=                    It supports multiple appending queries.                        =
+=               It acts as an address monitor, saving & restoring.                  =
+=               Default setting is randomized full-node selection.                  =
+=                 Custom IRI selection can override the default.                    =
+=====================================================================================

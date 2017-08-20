@@ -1,0 +1,252 @@
+<!--
+=====================================================================================
+=                       IOTABalance v1.0.0-beta Release                             =
+=                             Local Web Edition                                     =
+=                           Date: August 20th 2017                                  =
+=                          Mockup Designer: Navin.R                                 =
+=                             Author: Michael.S                                     =
+=                                  |iotaos|                                         =
+=====================================================================================
+-->
+<!DOCTYPE html>
+<html>
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	 <title> IOTA Balance</title>
+	 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	 <script src="js/jquery-3.2.1.min.js"></script>
+	 <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	 <link rel="stylesheet" type="text/css" href="css/newlightstyles.css">
+	 <link rel="stylesheet" type="text/css" href="css/newlight.css" id="css_theme">
+ 	 <script src="js/jquery-ui.js"></script>
+ 	 <script src="js/iotalibs/kerl.js"></script>
+ 	 <script src="js/iotalibs/inputValidator.js"></script>
+ 	 <script src="js/iotalibs/converter.js"></script>
+ 	 <script src="js/iotalibs/words.js"></script>
+ 	 <script src="js/iotalibs/bower_components/crypto-js/crypto-js.js"></script>
+	 <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+	 <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+	 <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+	 <link rel="manifest" href="fav/manifest.json">
+	 <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
+	 <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<div id="container">
+   	<div id="header">
+   		<div id="headbox">
+   			<img id="iotalogo" src="img/logo.png" alt="IOTA Logo">
+   			<div style="font-style: italic; color:grey; font-size:16px; font-weight:700;"></div>
+   			<div class="title_style">BALANCE</div>
+   			<div class="edition_text">Local Web Edition</div>
+				<div id="topbuttons">
+			  		<button id="directorylink" class="menu_buttons"">Directory</button> |
+			   		<button id="faqlink" class="menu_buttons">FAQ</button> |
+			   	    <button id="hoverContact" class="menu_buttons">Contact</button> |
+			   	    <button id="releasesOpen" class="menu_buttons">Releases</button>
+			    </div>
+			<div id="FAQview" style="display:none; margin:0 auto; width:500px; height:170px; ">
+ 			   	<li class="lis" style="margin-top:10px;">What is IOTA?</li>
+ 			   	<li class="lis" style=" font-size:14px;">IOTA is an open-source, permission-less distributed ledger. It uses a directed acyclic graph (DAG) as its protocol called the Tangle. This is programmed in trinary rather than binary. IOTA is designed to be the backbone of the IoT.</li>
+  			   	<li><a class="toplinks" style="font-size:14px;" class="menu_links" target="_blank" href="https://en.wikipedia.org/wiki/IOTA_(Distributed_Ledger_Technology)	">IOTA @ Wikipedia</a></li>		
+	    		<li class="lis" style="margin-top:10px; ">What is IOTA Balance?</li>
+ 			   	<li class="lis" style="font-size:14px;">This site is a simplistic tool which can be used to lookup balances of addresses on the tangle. It supports multiple appending queries. It can be used as an address monitor for multiple addresses, showing total balances, and supporting links to full address details.</li>
+			</div>
+			<div id="contactView" style="display:none; margin:0 auto; width:500px; height:12px; margin-bottom:4px; ">
+			   	<li class="menu_links_old" style="margin-top:6px;font-size:13px;">admin at iotaos.com</li>
+			</div>
+			<div id="releasesView" style="display:none; margin:0 auto; width:500px; height:24px;">
+			    <li>v1 Beta Release | August 20th 2017</li>
+			   	<li><a class="toplinks" style="font-size:14px; color:white" class="menu_links" target="_blank" href="https://github.com/iotaos/iotabalance">iotaos @ Github</a></li>	
+			</div>
+		</div>
+   	</div>
+   	<div id="body">
+   		<div id="the_menu" style="margin-bottom:45px; padding-bottom:10px;">
+   			<div id="inputdiv">	
+				<input style="margin-top:10px;" id="input_field" type="text" placeholder=" Input IOTA address">
+			</div>
+			<div id="functionbuttons" style="display:block; ">
+				<div style="margin-bottom:5px;">
+					<button id="checkers" style="" class=""><span id="checksum">SUM</span><span> | </span><span id="charcounting">Validity</span></button> 
+				</div>
+				<button id="saveSession" style="display:none;" class="session_buttons">Save </button> <span id="savebar">|</span>
+				<button id="saveSession_done" style="display:none;" >Saved</button> <span id="saveSession_donebar" style="display:none;">|</span>
+				<button id="restoreSession" style="display:none;" class="session_buttons">Restore </button> <span id="restorebar" style="display:none;">|</span>
+				<button id="restoration_done" style="display:none;" >Restored</button> <span id="restoredbar" style="display:none;">|</span>
+				<button id="overwriteSession" style="display:none;" class="session_buttons">Overwrite </button> <span id="overwritebar" style="display:none;">|</span>
+				<button id="overwritten_done" style="display:none;" class="session_buttons">Overwritten</button> <span id="overwrittenbar" style="display:none;">|</span>
+				<button id="theme_button" style="display: none;" class="session_buttons">Night Mode </button> <span id="tehemebar" style="display:none;">|</span>
+				<button id="qSession" style="display:none;" class="session_buttons">Help</button><span>|</span>
+				<button id="nodeSelector" style="" class="session_buttons">Settings</button>
+				<div id="count_result_div" style="display:none; ">
+					<button id="totalschecker"><span>Σ: </span><span id="count_result">0</span><span> Mi | </span><span id="count_result_d">0</span><span> $</span></button>
+				</div>
+			</div>		
+		</div>
+		<div id="data_out" style="margin-bottom:1px;">
+			<span style="font-size:14px;" id="session_message_new"></span>
+			<span class="overflowaddy" style="font-size:13px;" id="opening_message">Welcome to IOTA Balance</span>
+			<strong id="browser_notice">Please use Chrome</strong>
+			<span id="the_balanceM"></span>
+			<span id="the_balanceI"></span>
+		</div>
+		<div id="history_out"></div>
+		<div id="overwrite_dialog" title="Overwrite with nothing?" style="display:none;">
+			<p style="text-align: center; margin-top:25px; color:black; font-style:italic;">Overwrite this browser's saved addresses with nothing?</p>
+		</div>
+		<div id="faq_dialog" title="FAQ" style="display:none;">
+			<div id="contenthelpfaq">
+				<div id="wrapper">
+					<div id="lefthelp">	
+						<p style="text-align: center; margin-top:25px; color:black; ">
+							<strong>What is IOTA Balance?</strong><br><br>
+							It is a simplistic tool which can be used to lookup balances of addresses on the tangle. It supports multiple appending queries. It can be used as an address monitor for multiple addresses, saving and restoring, showing total balances, and supporting detail links.		
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="nodeselectDialog" title="Settings" style="display:none;">
+			<div id="contentselectdialog">
+				<div id="wrapper">
+					<div id="lefthelp">	
+						<p style="text-align: center; margin-top:25px; color:black; ">
+							<span>By Default, queries are done randomly each time to one of the IRI instances in this list. You may override the default behaviour by setting a custom IRI instance.</span>
+							<select id="NodeSelectForm" style="margin-top:12px; margin-bottom:12px;">
+								<option>https://n1.iota.nu:443</option>
+							  	<option>https://node.tangle.works:443</option>
+							  	<option>http://service.iotasupport.com:14265</option>
+							  	<option>http://eugene.iota.community:14265</option>
+							  	<option>http://eugene.iotasupport.com:14999</option>
+							  	<option>http://eugeneoldisoft.iotasupport.com:14265</option>
+							  	<option>http://node01.iotatoken.nl:14265</option>
+							  	<option>http://node02.iotatoken.nl:14265</option>
+							  	<option>http://node03.iotatoken.nl:14265</option>
+							  	<option>http://mainnet.necropaz.com:14500</option>
+							  	<option>http://5.9.149.169:14265</option>
+							  	<option>http://iota.digits.blue:14265</option>
+							  	<option>http://wallets.iotamexico.com:80</option>
+							  	<option>http://5.9.137.199:14265</option>
+							  	<option>http://5.9.118.112:14265</option>
+							  	<option>http://5.9.149.169:14265</option>
+							  	<option>http://88.198.230.98:14265</option>
+							  	<option>http://176.9.3.149:14265</option>
+							  	<option>http://node.lukaseder.de:14265</option>
+							</select>
+							<input id="custom_node" type="text" placeholder="Overide with Custom IRI">
+							<button id="save_node_settings" class="session_buttons">Save Custom Setting</button><br>
+							<button id="delete_settings" class="session_buttons">Delete Settings</button>
+							<span style="display: inline-block; margin-top:8px;">
+								<b>Note</b>: The Web Edition requires using an <span style="color:#182848">HTTPS</span> instance. 
+								The Local Web Edition, and Desktop Edition can use <span style="color:#182848">HTTP</span> instances also.
+							</span>
+							<span style="display: inline-block; margin-top:12px;">
+								<b>Exporting</b>: <a id="export_text_file" class="export_button" >Export</a> to fetch your local browser saved addresses to a text file. 
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="help_dialog" title="Help" style="display:none;">
+			<div id="contenthelp">
+				<div id="wrapper">
+					<div id="lefthelp">
+						<p style="text-align: center; margin-top:25px; color:black; ">
+							<span style="margin-bottom:30px;">
+								1. Use the Save button, to save your session of address lookups to your own browser using LocalStorage.<br><br>
+							</span>
+							<span>2. When you come back later to the page after exiting, you can restore your own session.<br><br></span>
+							<span>
+								3. When you restore, you can always Overwrite with new searches added, or different altogether. If you Overwrite with nothing loaded, it will delete your saved data from your browser.<br><br>
+							</span>
+							<span>4. SUM is a checksum of the address when you input a new one.</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="directory_dialog" title="Directory" style="display:none;">
+			<div id="wrapper">
+				<div id="content">
+					<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Global</span>
+	 			    	<li><a class="menu_links" target="_blank" href="http://iotachina.com">首页</a></li>
+	    			   	<li><a class="menu_links" target="_blank" href="http://blog.naver.com/iotakorea">한국</a></li>
+	    			   	<li><a class="menu_links" target="_blank" href="http://lhj.hatenablog.jp/entry/iota">日本</a></li> 
+	  			    	<li><a class="menu_links" target="_blank" href="http://iotaitalia.com">Italia</a></li>
+	  			    	<li><a class="menu_links" target="_blank" href="http://www.iotabrasil.com/">Italia</a></li>
+	    			</ul>	
+					<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">News</span>
+					   	<li><a class="menu_links" target="_blank" href="http://www.tangleblog.com/">Tangle Blog</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iota.news">IOTA News</a></li>
+	    			   	<li><a class="menu_links" target="_blank" href="https://twitter.com/iotatoken">Twitter</a></li>
+	    			</ul>	 
+	  				<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Social</span>
+					   	<li><a class="menu_links" target="_blank" href="http://www.tangleblog.com/">Slack Invite</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iota.news">Twitter</a></li>
+	    			   	<li><a class="menu_links" target="_blank" href="https://www.reddit.com/r/Iota/">Sub-Reddit</a></li>
+	      			   	<li><a class="menu_links" target="_blank" href="https://forum.iota.org/">Forum</a></li>
+	    			</ul>	 	
+	      			<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Whitepapers</span>
+						<li><a class="menu_links" target="_blank" href="http://iotatoken.com/IOTA_Whitepaper.pdf">Whitepaper</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://www.iotachina.com/wp-content/uploads/2016/11/2016112902003453.pdf">中国</a></li>
+	    			</ul>	 								    	
+			    </div>
+			    <div id="sidebar">
+					<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Info</span>
+	 			    	<li><a class="menu_links" target="_blank" href="https://iota.org">iota.org</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iotasupport.com">iotasupport.com</a></li>
+			 			<li><a class="menu_links" target="_blank" href="http://learn.iota.org/">Learn IOTA</a></li>
+				    	<li><a class="menu_links" target="_blank" href="https://matthewwinstonjohnson.gitbooks.io/iota-guide-and-faq/content/">Community Mobile</a></li>
+	 			    	<li><a class="menu_links" target="_blank" href="https://blog.iota.org/iota-ecosystem-fund-2-million-f6ade6a4d8ba">Ecosystem Fund</a></li>
+	 				    <li><a class="menu_links" target="_blank" href="https://laurencetennant.com/iota-tools/">IOTA Dev Tools</a></li>
+	 				    <li><a class="menu_links" target="_blank" href="https://iotabalance.com/guide.html">Linux IRI Guide</a></li>
+				    </ul>	
+			  		<ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Explorers</span>
+				    	<li><a class="menu_links" target="_blank" href="https://iota.codebuffet.co">RT Tangle</a></li>
+				    	<li><a class="menu_links" target="_blank" href="https://iotasear.ch/">iotasear.ch</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iota.tips">iota.tips</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://tangler.org">tangler.org</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iota.cool">iota.cool</a></li>
+				    	<li><a class="menu_links" target="_blank" href="https://tangle.blox.pm/">Visualization</a></li>
+				    </ul>
+				    <ul>
+			  			<span style="font-size:14px; color:black; font-weight:600;">Wallet</span>
+				    	<li><a class="menu_links" target="_blank" href="https://github.com/iotaledger/wallet">Official</a></li>
+				    	<li><a class="menu_links" target="_blank" href="http://iotawallet.info//">Community Mobile</a></li>
+				    </ul>
+			    </div>
+			 	<div id="cleared"></div>
+			</div>
+		</div>
+		<div id="footer">
+		   	<img src="img/iotaos.png" alt="iotaOS Logo"><br>
+			<span class="pricing_span">
+			    1 Mi = $ <span id="priceMi"></span>  | <span id="priceBtc"></span> BTC <br> Marketcap = <span id="imcap"></span> Billion | Rank #<span id= "irank"></span>
+			</span>
+			<div style="width:100%; margin:0 auto; padding-top:12px;"> 
+		   	 	<button id="supportButton" class="footer_button">
+		   	 		<span style="color:white"> <img src="img/heart.png"> <img src="img/heart.png"></span> <img src="img/heart.png">
+		   	 	</button>
+		    </div>
+				<div id="support_View" style="text-align:center; display:none; margin-bottom:20px;  height:20px;">
+			    	<li class="menu_links_old lis" style="margin-top:2px; font-size:14px;">
+			    		Donate to Support the iotaOS Team<br>
+				    	<div class="overflowaddy ellipsis" style="font-size:10.5px; font-weight:400; padding-left:5px; padding-right:5px;">								VJZQTOWWSCTHDECYRFUPCNPVEQEB9OLHBAZXQCVTTXFYQASGZOHPFLJLT9LKIEYHCRUWWGJX9GXYZQTP9F9BIKZ9HW
+				    	</div>
+			    	</li>
+			    </div>
+	   	</div>
+   	</div>
+</div>
+<script src="js/iotabalance.js"></script>
+</body>
+</html>
