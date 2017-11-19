@@ -436,8 +436,11 @@ function getITbalance (input_command, pass_i, IRItoUse) {
 			opening_message.textContent = " " + input_command.addresses[0];
 			var quickcalc = parseFloat(Math.round(currentpriceusd * currentmi * 100) / 100).toFixed(2);
 			the_balanceM.textContent = " " + datain.balances[0]/1000000 + " Mi" + " ~ " + quickcalc + " $" ;
-			var this_detail_link = "https://iota.codebuffet.co/#/addr/" + input_command.addresses[0];
-			the_balanceI.innerHTML = datain.balances[0] + " i" + " @ Index: " + datain.milestoneIndex + " | IRI : " + IRItoUse + " | " + '<a target="_blank" href="'+this_detail_link+'">'+"Details"+'</a>';
+
+			//var this_detail_link = "tangleEXPLORERADDRESSofYourChoice" + input_command.addresses[0];
+			//append this on the next line: + " | " + '<a target="_blank" href="'+this_detail_link+'">'+"Details"+'</a>'
+			the_balanceI.innerHTML = datain.balances[0] + " i" + " @ Index: " + datain.milestoneIndex + " | IRI : " + IRItoUse ;
+
 			input_field.value = "";
 			if (checkrestoreON === true) {console.log("Generating Restoration Display"); restore_appending(pass_i);}
 			if (restored_array == undefined) {}
