@@ -191,7 +191,7 @@ function listeningnow() {
 			} else {
 				checksum.style.display = "";
 				checksum.textContent = lastchars;	
-			} 
+			}
 		}
 	});
 
@@ -342,7 +342,7 @@ function processRestore() {
 $(input_balances).on('keyup',function(){
 	var charCount = $(this).val().replace(/\s/g, '').length;
 	//display counter $(charcounting).text(charCount);
-	//console.log(charCount);
+	//console.log(charCount); // removed    
 	if (charCount == 90 || charCount == 81) {  charcounting.textContent="Valid"; console.log("Valid Address");} 
 	else if (charCount == 0) { charcounting.textContent = "Validity";}
 	else { console.log("yikes"); charcounting.textContent="Invalid"; }
@@ -351,9 +351,9 @@ $(input_balances).on('keyup',function(){
 input_field.addEventListener("change", function(){
 	getusd();
 	if (the_balanceM.textContent == "") {
-		if ($('#input_field').val().length ===90 || $('#input_field').val().length ===81) {getInputAndProcess();;}
+		if ($('#input_field').val().length ===90 || $('#input_field').val().length ===81) {getInputAndProcess();}
 		else {console.log("invalid address");}
-	} else {
+	} else { 
 		if ($('#input_field').val().length ===90 || $('#input_field').val().length ===81) {
 			if (history_out.innerHTML == "") {
 				history_out.innerHTML = data_out.innerHTML;
@@ -367,7 +367,14 @@ input_field.addEventListener("change", function(){
 });
 
 function getInputAndProcess () {
-	var uppercaseinput = input_field.value.toUpperCase();
+	var uppercaseinput;
+	if ($('#input_field').val().length == 90 ) {
+		var sendStrippedAddy = $('#input_field').val();
+		sendStrippedAddy = sendStrippedAddy.substring(0, 81);
+		uppercaseinput = sendStrippedAddy.toUpperCase();
+	} else {
+		uppercaseinput = input_field.value.toUpperCase();
+	}
 	var command = {
 		'command': 'getBalances',
 		'addresses': [uppercaseinput],
@@ -390,6 +397,7 @@ function getITbalance (input_command, pass_i, IRItoUse) {
 		url: IRItoUse,
 		type: 'POST',
 		dataType: 'json',
+		headers: {'X-IOTA-API-Version': '1'},
 		contentType: 'application/json',
 		data:  JSON.stringify(input_command),
 		processData: false,
