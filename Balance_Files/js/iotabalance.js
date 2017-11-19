@@ -1,6 +1,6 @@
 /*
 =====================================================================================
-=                       IOTABalance v1.0.0-beta Release                             =
+=                       IOTABalance v1.0.1-beta Release                             =
 =                             Local Web Edition                                     =
 =                           Date: August 20th 2017                                  =
 =                          Mockup Designer: Navin.R                                 =
