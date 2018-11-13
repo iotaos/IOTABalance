@@ -1,10 +1,12 @@
-Latest Update ! Currently hosted on IPFS.
+Latest Update ! Currently hosted on IPFS linked from 'iotabalance.com' will direct to the ipfs version.
 
+- Better update.
 - Restructured code, must more proper functionality with restorations.
+- All client side code
 - (Will restore properly in sequence with callbacks)
 - Small refresh of some design
+- Uses stripped out exact components from iotalib.js just for proper iota address checksums
 - Uses 2 source targets from community sites for public nodes, thanks to the sources listed on the page!
-- Just better.
 
 
 
