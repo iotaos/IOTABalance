@@ -2,9 +2,9 @@
 =====================================================================================
 =                       IOTABalance v1.0.0-beta Release                             =
 =                             Local Web Edition                                     =
-=                           Date: August 20th 2017                                  =
+=                           Date: November 13 2018                                  =
 =                          Mockup Designer: Navin.R                                 =
-=                             Author: Michael.S                                     =
+=                             Author: Michael                                       =
 =                                  |iotaos|                                         =
 =====================================================================================
 */
@@ -14,6 +14,7 @@ body {
    height:100%;
    background-color: white;
 }
+.frontMsg{padding:1px;}
 #headbox {
 	color:white;
 	text-align: center;
@@ -46,9 +47,9 @@ body {
 	font-size:13px;
 	padding-right:5px; 
 	padding-left:5px; 
-	border-radius:8px;
+	border-radius:0px;
 	color:black;
-	padding:4px;
+	padding:10px;
 }
 
 #restoration_done {
@@ -93,8 +94,6 @@ body {
 .session_buttons:hover {
 	background: #6e89c9;
 	color:white;
-	border-radius:8px;
-	padding:4px;
 }
 .export_button {
 	font-family: 'Lato', sans-serif;
@@ -111,55 +110,44 @@ body {
 	border-radius:8px;
 	padding:4px;
 }
-#opening_message {
-	margin-top:6px;
+#openingMessage {
 	font-family: 'Lato', sans-serif;
-	padding-top:4px;
-	display: inline-block;
 	width:100%;
-	letter-spacing:1px;
-	font-size:16px;
+	font-size:14px;
 	color:black;
 	text-align: center;
 }
-#browser_notice {
+#browserNotice {
 	font-family: 'Lato', sans-serif;
-	padding-top:4px;
 	display: inline-block;
 	width:100%;
-	letter-spacing:1px;
 	font-size:14px;
 	color:black;
 	text-align: center;	
 }
-#session_message_new {
-	padding-top:24px;
+#sessionMessageNew {
 	display: inline-block;
 	width:100%;
-	letter-spacing:1px;
-	font-size:16px;
+	font-size:14px;
 	color:black;
 	text-align: center;
-	padding-bottom:4px;
 }
 
-#the_balanceM {
+#theBalanceM {
 	margin-top:6px;
 	font-family: 'Lato', sans-serif;
 	display: inline-block;
 	width:100%;
 	height:20px;
-	letter-spacing:1px;
 	font-size:17px;
 	color: black;
 	text-align: center;
 }
-#the_balanceI {
+#theBalanceI {
 	margin-top:6px;
 	font-family: 'Lato', sans-serif;
 	display: inline-block;
 	width:100%;
-	letter-spacing:1px;
 	font-size:12px;
 	color: black;
 	text-align: center;
@@ -180,8 +168,7 @@ body {
 	font-size:14px;
 }
 #the_menu {
-	background: white;
-	height:75px;
+	background:whitesmoke;
 	width:100%;	
 	text-align: center;
 }
@@ -190,12 +177,10 @@ body {
 	padding-top:10px;
 	display: inline-block;
 	width:100%;
-	letter-spacing:1px;
 	font-size:13px;
 	color:black;
 	text-align: center;
 }
-
 #totalschecker {
 	font-family: 'Lato', sans-serif;
 	border-radius:9px;
@@ -237,15 +222,13 @@ body {
 	font-size:13px;
 	padding-right:5px; 
 	padding-left:5px; 
-	border-radius:8px;
+	border-radius:0px;
 	color:white;
-	padding:4px;
+	padding:10px;
 }
 .menu_buttons:hover {
 	background: #4563A9;
-	border-radius:8px;
 	color:white;
-	padding:4px;
 }
 #overwrite_dialog {
 }
@@ -261,7 +244,7 @@ body {
   height:214px;
 
 }
-#contentselectdialog {
+#contentSelectDialog {
   float: right;
   width: 100%;
   height:390px;	

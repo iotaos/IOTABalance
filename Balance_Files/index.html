@@ -2,9 +2,9 @@
 =====================================================================================
 =                       IOTABalance v1.0.0-beta Release                             =
 =                             Local Web Edition                                     =
-=                           Date: August 20th 2017                                  =
+=                           Date: November 13 2018                                  =
 =                          Mockup Designer: Navin.R                                 =
-=                             Author: Michael.S                                     =
+=                             Author: Michael                                       =
 =                                  |iotaos|                                         =
 =====================================================================================
 -->
@@ -41,9 +41,9 @@
    			<div class="title_style">BALANCE</div>
    			<div class="edition_text">Local Web Edition</div>
 				<div id="topbuttons">
-			  		<button id="directorylink" class="menu_buttons"">Directory</button> |
-			   		<button id="faqlink" class="menu_buttons">FAQ</button> |
-			   	    <button id="hoverContact" class="menu_buttons">Contact</button> |
+			  		<button id="directoryLink" class="menu_buttons"">Directory</button>
+			   		<button id="faqLink" class="menu_buttons">FAQ</button>
+			   	    <button id="hoverContact" class="menu_buttons">Contact</button>
 			   	    <button id="releasesOpen" class="menu_buttons">Releases</button>
 			    </div>
 			<div id="FAQview" style="display:none; margin:0 auto; width:500px; height:170px; ">
@@ -57,46 +57,50 @@
 			   	<li class="menu_links_old" style="margin-top:6px;font-size:13px;">admin at iotaos.com</li>
 			</div>
 			<div id="releasesView" style="display:none; margin:0 auto; width:500px; height:24px;">
-			    <li>v1 Beta Release | August 20th 2017</li>
+			    <li>Beta Release | November 13 2018</li>
 			   	<li><a class="toplinks" style="font-size:14px; color:white" class="menu_links" target="_blank" href="https://github.com/iotaos/iotabalance">iotaos @ Github</a></li>	
 			</div>
 		</div>
    	</div>
    	<div id="body">
-   		<div id="the_menu" style="margin-bottom:45px; padding-bottom:10px;">
-   			<div id="inputdiv">	
-				<input style="margin-top:10px;" id="input_field" type="text" placeholder=" Input IOTA address">
+   		<div id="the_menu">
+   			<div id="input_div">	
+				<input style="margin-top:10px;" id="inputField" type="text" placeholder="Input IOTA address">
 			</div>
-			<div id="functionbuttons" style="display:block; ">
-				<div style="margin-bottom:5px;">
-					<button id="checkers" style="" class=""><span id="checksum">SUM</span><span> | </span><span id="charcounting">Validity</span></button> 
-				</div>
-				<button id="saveSession" style="display:none;" class="session_buttons">Save </button> <span id="savebar">|</span>
-				<button id="saveSession_done" style="display:none;" >Saved</button> <span id="saveSession_donebar" style="display:none;">|</span>
-				<button id="restoreSession" style="display:none;" class="session_buttons">Restore </button> <span id="restorebar" style="display:none;">|</span>
-				<button id="restoration_done" style="display:none;" >Restored</button> <span id="restoredbar" style="display:none;">|</span>
-				<button id="overwriteSession" style="display:none;" class="session_buttons">Overwrite </button> <span id="overwritebar" style="display:none;">|</span>
-				<button id="overwritten_done" style="display:none;" class="session_buttons">Overwritten</button> <span id="overwrittenbar" style="display:none;">|</span>
-				<button id="theme_button" style="display: none;" class="session_buttons">Night Mode </button> <span id="tehemebar" style="display:none;">|</span>
-				<button id="qSession" style="display:none;" class="session_buttons">Help</button><span>|</span>
+			<div id="functionbuttons" style="display:none;">
+
+				<button id="saveSession" style="display:none;" class="session_buttons">Save </button>
+				<button id="saveSessionDone" style="display:none;" >Saved</button> <span id="saveSessionDoneBar" style="display:none;">|</span>
+				<button id="restoreSession" style="display:none;" class="session_buttons">Restore </button> <span id="restoreBar" style="display:none;">|</span>
+				<button id="restorationDone" style="display:none;" >Restored</button> <span id="restoredBar" style="display:none;">|</span>
+				<button id="overwriteSession" style="display:none;" class="session_buttons">Overwrite </button>
+				<button id="overwrittenDone" style="display:none;" class="session_buttons">Overwritten</button>
+				<button id="themeButton" style="display: none;" class="session_buttons">Night Mode </button>
+				<button id="qSession" style="display:none;" class="session_buttons">Help</button>
 				<button id="nodeSelector" style="" class="session_buttons">Settings</button>
-				<div id="count_result_div" style="display:none; ">
-					<button id="totalschecker"><span>Σ: </span><span id="count_result">0</span><span> Mi | </span><span id="count_result_d">0</span><span> $</span></button>
+				<button id="randomSelect" style="" class="session_buttons">Random Node</button>
+				<button id="checkers" class="">
+					<span id="checkSum">SUM</span><span> | </span><span id="charCounting">Validity</span>
+				</button> 
+				<div id="countResultDiv" style="display:none; ">
+					<button id="totalsChecker">
+						<span>Σ: </span><span id="countResult">0</span><span> Mi | </span><span id="countResultD">0</span><span> $</span>
+					</button>
 				</div>
 			</div>		
 		</div>
-		<div id="data_out" style="margin-bottom:1px;">
-			<span style="font-size:14px;" id="session_message_new"></span>
-			<span class="overflowaddy" style="font-size:13px;" id="opening_message">Welcome to IOTA Balance</span>
-			<strong id="browser_notice">Please use Chrome</strong>
-			<span id="the_balanceM"></span>
-			<span id="the_balanceI"></span>
+		<div id="dataOut" style="margin-bottom:1px;font-size:16px;">
+			<div id="sessionMessageNew"></div>
+			<div id="openingMessage"  class="overflowaddy"></div>
+			<div id="browserNotice"></div>
+			<div id="theBalanceM"></div>
+			<div id="theBalanceI"></div>
 		</div>
-		<div id="history_out"></div>
-		<div id="overwrite_dialog" title="Overwrite with nothing?" style="display:none;">
+		<div id="historyOut"></div>
+		<div id="overwriteDialog" title="Overwrite with nothing?" style="display:none;">
 			<p style="text-align: center; margin-top:25px; color:black; font-style:italic;">Overwrite this browser's saved addresses with nothing?</p>
 		</div>
-		<div id="faq_dialog" title="FAQ" style="display:none;">
+		<div id="faqDialog" title="FAQ" style="display:none;">
 			<div id="contenthelpfaq">
 				<div id="wrapper">
 					<div id="lefthelp">	
@@ -108,49 +112,31 @@
 				</div>
 			</div>
 		</div>
-		<div id="nodeselectDialog" title="Settings" style="display:none;">
-			<div id="contentselectdialog">
+		<div id="nodeSelectDialog" title="Settings" style="display:none;">
+			<div id="contentSelectDialog">
 				<div id="wrapper">
 					<div id="lefthelp">	
 						<p style="text-align: center; margin-top:25px; color:black; ">
 							<span>By Default, queries are done randomly each time to one of the IRI instances in this list. You may override the default behaviour by setting a custom IRI instance.</span>
-							<select id="NodeSelectForm" style="margin-top:12px; margin-bottom:12px;">
-								<option>https://n1.iota.nu:443</option>
-							  	<option>https://node.tangle.works:443</option>
-							  	<option>http://service.iotasupport.com:14265</option>
-							  	<option>http://eugene.iota.community:14265</option>
-							  	<option>http://eugene.iotasupport.com:14999</option>
-							  	<option>http://eugeneoldisoft.iotasupport.com:14265</option>
-							  	<option>http://node01.iotatoken.nl:14265</option>
-							  	<option>http://node02.iotatoken.nl:14265</option>
-							  	<option>http://node03.iotatoken.nl:14265</option>
-							  	<option>http://mainnet.necropaz.com:14500</option>
-							  	<option>http://5.9.149.169:14265</option>
-							  	<option>http://iota.digits.blue:14265</option>
-							  	<option>http://wallets.iotamexico.com:80</option>
-							  	<option>http://5.9.137.199:14265</option>
-							  	<option>http://5.9.118.112:14265</option>
-							  	<option>http://5.9.149.169:14265</option>
-							  	<option>http://88.198.230.98:14265</option>
-							  	<option>http://176.9.3.149:14265</option>
-							  	<option>http://node.lukaseder.de:14265</option>
+							<select id="nodeSelectForm" style="margin-top:12px; margin-bottom:12px;">
+
 							</select>
-							<input id="custom_node" type="text" placeholder="Overide with Custom IRI">
-							<button id="save_node_settings" class="session_buttons">Save Custom Setting</button><br>
-							<button id="delete_settings" class="session_buttons">Delete Settings</button>
-							<span style="display: inline-block; margin-top:8px;">
+							<input id="customNode" type="text" placeholder="Overide with Custom IRI">
+							<button id="saveNodeSettings" class="session_buttons">Save Custom Setting</button><br>
+							<button id="deleteSettings" class="session_buttons">Delete Settings</button>
+							<span style="display: inline-block;">
 								<b>Note</b>: The Web Edition requires using an <span style="color:#182848">HTTPS</span> instance. 
 								The Local Web Edition, and Desktop Edition can use <span style="color:#182848">HTTP</span> instances also.
 							</span>
-							<span style="display: inline-block; margin-top:12px;">
-								<b>Exporting</b>: <a id="export_text_file" class="export_button" >Export</a> to fetch your local browser saved addresses to a text file. 
+							<span style="display: inline-block;">
+								<b>Exporting</b>: <a id="exportTextFile" class="export_button" >Export</a> to fetch your local browser saved addresses to a text file. 
 							</span>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="help_dialog" title="Help" style="display:none;">
+		<div id="helpDialog" title="Help" style="display:none;">
 			<div id="contenthelp">
 				<div id="wrapper">
 					<div id="lefthelp">
@@ -168,7 +154,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="directory_dialog" title="Directory" style="display:none;">
+		<div id="directoryDialog" title="Directory" style="display:none;">
 			<div id="wrapper">
 				<div id="content">
 					<ul>
@@ -230,23 +216,24 @@
 		<div id="footer">
 		   	<img src="img/iotaos.png" alt="iotaOS Logo"><br>
 			<span class="pricing_span">
-			    1 Mi = $ <span id="priceMi"></span>  | <span id="priceBtc"></span> BTC <br> Marketcap = <span id="imcap"></span> Billion | Rank #<span id= "irank"></span>
+			    1 Mi = $ <span id="priceMi"></span>  | <span id="priceBtc"></span> BTC <br> Marketcap = <span id="imCap"></span> Billion | Rank #<span id= "iRank"></span>
 			</span>
 			<div style="width:100%; margin:0 auto; padding-top:12px;"> 
 		   	 	<button id="supportButton" class="footer_button">
 		   	 		<span style="color:white"> <img src="img/heart.png"> <img src="img/heart.png"></span> <img src="img/heart.png">
 		   	 	</button>
 		    </div>
-				<div id="support_View" style="text-align:center; display:none; margin-bottom:20px;  height:20px;">
+				<div id="supportView" style="text-align:center; display:none; margin-bottom:20px;  height:20px;">
 			    	<li class="menu_links_old lis" style="margin-top:2px; font-size:14px;">
 			    		Donate to Support the iotaOS Team<br>
-				    	<div class="overflowaddy ellipsis" style="font-size:10.5px; font-weight:400; padding-left:5px; padding-right:5px;">								FQWWJRGMBLIKXKGYCDTTXPAWOTXEBBJUIVPLFQBJBYSEMJXNACLXMHNVJPIRRLAMARZUGBXRSNN9OCJCY
+				    	<div class="overflowaddy ellipsis" style="font-size:10.5px; font-weight:400; padding-left:5px; padding-right:5px;">
+				    		SDIRRVXMRYPLLJGPJOLSIGXUULYAH9LTU9FMDDEEMLCWBOXXTTXHC9YEPMXWPGFGKEDSSYFVSMNTKQAMWQEQVLCXGW
 				    	</div>
 			    	</li>
 			    </div>
 	   	</div>
    	</div>
 </div>
-<script src="js/iotabalance.js"></script>
+<script src="js/iotaBalance.js"></script>
 </body>
 </html>

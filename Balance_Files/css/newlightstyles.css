@@ -2,9 +2,9 @@
 =====================================================================================
 =                       IOTABalance v1.0.0-beta Release                             =
 =                             Local Web Edition                                     =
-=                           Date: August 20th 2017                                  =
+=                           Date: November 13 2018                                  =
 =                          Mockup Designer: Navin.R                                 =
-=                             Author: Michael.S                                     =
+=                             Author: Michael                                       =
 =                                  |iotaos|                                         =
 =====================================================================================
 */
@@ -35,23 +35,24 @@ button {
 	font-family: 'Lato', sans-serif;
 	font-size:14px;
 	border: none;
-	border-radius:10px;
 	background: none;
 	height: 100%;
 	letter-spacing:1px;
 	transition: all 0.5s;
 	outline: 0;
+	padding:10px;
 }
 button:hover {
 	background: #4563A9;
+	color:white;
 }
 #history_out {
 	height:100%;
-	padding-bottom:150px;`
+	padding-bottom:150px;
 }
 
 #footer {
-   padding-top:25px;
+   margin-top:30px;
    text-align: center;
    position:relative;
    bottom:0;
@@ -81,11 +82,11 @@ button:hover {
 	text-align: center;
 	font-style: italic;
 }
-#inputdiv {
+#inputDiv {
 	margin-top:10px;
 	margin-bottom:10px;
 }
-#input_field {
+#inputField {
 	display: inline-block;
 	width:40%;
 	height:100%;
@@ -121,7 +122,8 @@ button:hover {
 
 #functionbuttons {
 	margin-top:5px;
-	margin-bottom:20px;
+	padding-bottom:10px;
+	margin-bottom:10px;
 }
 
 #iotalogo {
@@ -165,13 +167,11 @@ li {
 }
 #checkers {
 	font-family: 'Lato', sans-serif;
-	border-radius:9px;
 	color:black;
 	margin-top:1px;
 	font-size:11px;
-	height:18px;
 	display:inline-block;
-	border: 1px solid #6e89c9;
+	padding:10px;
 }
 #checkers:hover {
 	color: black;
